@@ -1,26 +1,31 @@
 <script>
-
-  // const toggle = document.getElementById('theme-toggle');
-  //   toggle.addEventListener('change', () => {
-  //     document.documentElement.classList.toggle("dark");
-  //   });
-  // });
-  
-  // Theme toggle functionality
-  const themeToggle = document.getElementById('theme-toggle');
-  
-  // Check for saved theme preference or use system preference
-  const savedTheme = localStorage.getItem('theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-    document.documentElement.classList.add('dark');
-  }
-  
-  themeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    const isDark = document.documentElement.classList.contains('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Set initial state
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        html.classList.add('dark');
+        toggle.checked = true;
+    } else {
+        html.classList.remove('dark');
+        toggle.checked = false;
+    }
+    
+    // Handle toggle changes
+    toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
 
 </script>
