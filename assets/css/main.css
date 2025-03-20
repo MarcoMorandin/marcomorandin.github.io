@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+* {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(13, 148, 136);
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0.967 0.003 264.542);
+}

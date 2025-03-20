@@ -1,0 +1,20 @@
+<header class="flex fixed right-5 w-3/4 h-16 p-4 bg-white z-1000">
+    <div class="absolute inline-block cursor-pointer right-30 top-5">
+      {{ partial "languageSelector.html" . }}
+    </div>
+    <label for="theme-toggle" class="absolute inline-block w-16 h-8 cursor-pointer right-8">
+        <input type="checkbox" id="theme-toggle" class="peer sr-only">
+        <span class="absolute inset-0 bg-amber-200 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-blue-200 dark:bg-amber-300 dark:peer-checked:bg-blue-300 peer-disabled:opacity-50 peer-disabled:pointer-events-none"></span>
+        <span class="absolute top-1/2 start-1 -translate-y-1/2 size-6 bg-white rounded-full shadow-xs transition-transform duration-200 ease-in-out peer-checked:translate-x-8 dark:bg-white"></span>
+        
+        <!-- Left Icon (On - Moon) -->
+        <span class="absolute top-1/2 end-1 -translate-y-1/2 flex justify-center items-center size-6 text-blue-600 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-200 dark:text-blue-600">
+          <i class="fa-regular fa-moon"></i>
+        </span>
+
+        <!-- Right Icon (Off - Sun) -->
+        <span class="absolute top-1/2 start-1 -translate-y-1/2 flex justify-center items-center size-6 text-amber-600 peer-checked:opacity-0 peer-checked:invisible transition-all duration-200 dark:text-amber-600">
+          <i class="fa-regular fa-sun"></i>
+        </span>
+      </label>
+</header>

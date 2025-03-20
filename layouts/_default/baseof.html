@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    {{ partialCached "css.html" . }}
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="https://kit.fontawesome.com/8629131bad.js" crossorigin="anonymous"></script>
+      <script>
+        // Initialize theme early to prevent flash
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</head>
+<body>
+  <div class="flex">
+    {{ partial "sidebar.html" . }}
+    {{ block "main" . }}{{ end }}
+    
+  </div>
+    
+  {{ partial "scripts.html" . }}
+</body>
+</html>

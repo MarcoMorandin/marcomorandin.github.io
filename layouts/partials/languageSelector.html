@@ -1,0 +1,29 @@
+<div class="language-switcher flex items-center space-x-2">
+  {{ $totalLanguages := len $.Site.Languages }}
+  {{ range $index, $language := $.Site.Languages }}
+    {{ $lang := $language.Lang }}
+    {{ if eq $lang $.Page.Language.Lang }}
+      <a href="{{ $.Page.Permalink }}" class="hover:scale-110 transition-transform" aria-label="{{ $language.LanguageName }} (current)">
+        <img src="/flags/{{ $lang }}.svg" alt="{{ $language.LanguageName }} flag" class="w-6 h-4">
+      </a>
+    {{ else }}
+      {{ $translations := where $.Page.Translations "Language.Lang" $lang }}
+      {{ if $translations }}
+        {{ $translation := index $translations 0 }}
+        <a href="{{ $translation.Permalink }}" class="hover:scale-110 transition-transform grayscale opacity-30" aria-label="Switch to {{ $language.LanguageName }}">
+          <img src="/flags/{{ $lang }}.svg" alt="{{ $language.LanguageName }} flag" class="w-6 h-4">
+        </a>
+      {{ else }}
+        {{ $targetHome := where $.Site.Home.Translations "Language.Lang" $lang | first }}
+        {{ if $targetHome }}
+          <a href="{{ $targetHome.Permalink }}" class="hover:scale-110 transition-transform grayscale opacity-30" aria-label="Switch to {{ $language.LanguageName }}">
+            <img src="/flags/{{ $lang }}.svg" alt="{{ $language.LanguageName }} flag" class="w-6 h-4">
+          </a>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if lt $index (sub $totalLanguages 1) }}
+      <span class="text-gray-500">|</span>
+    {{ end }}
+  {{ end }}
+</div>
