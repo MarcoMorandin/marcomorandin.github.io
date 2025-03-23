@@ -1,7 +1,6 @@
 ---
 date: '2025-03-04T09:53:42+02:00'
 title: "\"Oltre La Robotica\" Award"
-company: " "
 draft: false
 year: "2018"
 ---

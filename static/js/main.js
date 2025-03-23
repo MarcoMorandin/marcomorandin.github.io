@@ -3,12 +3,12 @@ function updateActiveLink() {
   document.querySelectorAll('.sidebar-link').forEach(link => {
     const isActive = link.getAttribute('href') === hash;
     link.classList.toggle('translate-x-3', isActive);
-    link.classList.toggle('text-white', isActive);
+    link.classList.toggle('text-background', isActive);
     link.classList.toggle('font-semibold', isActive);
     const chevron = link.previousElementSibling;
     chevron.classList.toggle('opacity-100', isActive);
     chevron.classList.toggle('translate-x-0', isActive);
-    chevron.classList.toggle('text-white', isActive);
+    chevron.classList.toggle('text-background', isActive);
     chevron.classList.toggle('font-semibold', isActive);
     chevron.classList.toggle('translate-x-5', !isActive);
     chevron.classList.toggle('opacity-0', !isActive);

@@ -1,26 +1,26 @@
 {{ define "main" }}
 
 
-<div id="main" class="flex-col min-h-screen w-3/4 right-5 bg-white dark:bg-slate-700 h-screen overflow-y-auto scroll-smooth">
+<div id="main" class="flex-col min-h-screen w-3/4 right-5 bg-background h-screen overflow-y-auto scroll-smooth">
     {{ partial "header.html" . }}
 
     <main  class="flex-[3]">
         <section id="home" class="flex min-h-screen w-full items-center justify-center">
             {{ partial "home.html" . }}
         </section>
-        <hr class="w-150 h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded-sm md:my-10" />
+        <hr class="w-150 h-0.5 mx-auto my-4 bg-border border-0 rounded-sm md:my-10" />
         <section id="about" class="min-h-screen w-full flex flex-col items-center justify-center gap-20 p-10 md:p-16 xl:px-32">
             {{ partial "about.html" . }}
         </section>
-        <hr class="w-150 h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded-sm md:my-10" />
+        <hr class="w-150 h-0.5 mx-auto my-4 bg-border border-0 rounded-sm md:my-10" />
         <section id="education" class="min-h-screen w-full flex flex-col items-center justify-center gap-20 p-10 md:p-16 xl:px-32">
             {{ partial "education.html" . }}
         </section>
-        <hr class="w-150 h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded-sm md:my-10" />
+        <hr class="w-150 h-0.5 mx-auto my-4 bg-border border-0 rounded-sm md:my-10" />
         <section id="experience" class="min-h-screen w-full flex flex-col items-center justify-center gap-20 p-10 md:p-16 xl:px-32">
             {{ partial "experiences.html" . }}
         </section>
-        <hr class="w-150 h-0.5 mx-auto my-4 bg-gray-300 border-0 rounded-sm md:my-10" />
+        <hr class="w-150 h-0.5 mx-auto my-4 bg-border border-0 rounded-sm md:my-10" />
         <section id="project" class="min-h-screen w-full flex flex-col items-center justify-center gap-20 p-10 md:p-16 xl:px-32">
             {{ partial "projects.html" . }}
         </section>

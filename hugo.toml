@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Marco Morandin'
 
 defaultContentLanguage = "en"  # Default language
+
 [languages]
   [languages.en]
     languageName = "English"
