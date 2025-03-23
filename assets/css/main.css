@@ -40,21 +40,25 @@
   --color-text-primary: oklch(0.443 0.11 240.79);
   --color-text-secondary: oklch(0.746 0.16 232.661);
   --color-text-third: oklch(0.901 0.058 230.902);
-
   --color-text: oklch(0.208 0.042 265.755);
+
   --color-background: oklch(0.984 0.003 247.858);
   --color-border: oklch(0.869 0.022 252.894);
   --color-hover: oklch(0.901 0.058 230.902);
   
+  /* Dark theme */
+  --color-primary-dark: #00598a;
+  --color-secondary-dark: oklch(0.346 0.16 232.661);
+  --color-accent-dark: #4cc3ff;
+  
+  --color-sidebar-dark: #282828;
 
-  --color-primary-dark: oklch(0.6 0.118 184.704);
-  --color-secondary-dark: oklch(0.777 0.152 181.912);
-  --color-accent-dark: oklch(0.704 0.14 182.503);
-  --color-text-primary-dark: oklch(0.373 0.034 259.733);
-  --color-text-secondary-dark: oklch(0.551 0.027 264.364);
-  --color-text-third-dark: oklch(0.929 0.013 255.508);
-  --color-text-dark: oklch(0.704 0.04 256.788);
-  --color-background-dark: oklch(0.967 0.003 264.542);
-  --color-hover-dark: oklch(0.984 0.014 180.72);
-  --color-border-dark: oklch(0.928 0.006 264.531);
+  --color-text-primary-dark: #4cc3ff;
+  --color-text-secondary-dark: #839fbd;
+  --color-text-third-dark: #4cc3ff;
+  --color-text-dark: #8b8b8b;
+
+  --color-background-dark: #121212;
+  --color-border-dark: #8b8b8b;
+  --color-hover-dark: oklch(0.208 0.042 265.755);
 }

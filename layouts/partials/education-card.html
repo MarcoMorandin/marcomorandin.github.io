@@ -1,8 +1,8 @@
-<div class="relative space-y-1 border-l-2 border-border p-8 text-left">
-    <h3 class="text-xl font-semibold md:text-2xl">{{ .title }}</h3>
-    <p class="font-light text-lg text-text-secondary">{{ .year }}</p>
-    <p class="text-sm text-text">
+<div class="relative space-y-1 border-l-2 border-border dark:border-border p-8 text-left">
+    <h3 class="text-xl font-semibold md:text-2xl text-primary-text dark:text-text-primary-dark">{{ .title }}</h3>
+    <p class="font-light text-lg text-text-secondary dark:text-text-secondary-dark">{{ .year }}</p>
+    <p class="text-sm text-text dark:text-text-dark">
       {{ .degree }}
     </p>
-    <span class="absolute -left-[11px] top-10 h-5 w-5 rounded-full bg-accent"></span>
+    <span class="absolute -left-[11px] top-10 h-5 w-5 rounded-full bg-accent dark:bg-accent-dark"></span>
 </div>

@@ -1,15 +1,15 @@
-<div class="relative space-y-1 border-l-2 border-border p-8 text-left">
-    <h3 class="text-xl font-semibold md:text-2xl">{{ .Params.title }}</h3>
+<div class="relative space-y-1 border-l-2 border-border dark:border-border-dark p-8 text-left">
+    <h3 class="text-xl font-semibold md:text-2xl text-primary-text dark:text-text-primary-dark">{{ .Params.title }}</h3>
     {{ if .Params.company }}
       <div class="flex gap-8">
     {{ else }}    
       <div class="flex">
     {{ end }}
-      <p class="font-light text-lg text-text-secondary"><strong>{{ .Params.company }}</strong></p>
-      <p class="font-light text-lg text-text-secondary">{{ .Params.year }}</p>
+      <p class="font-light text-lg text-text-secondary dark:text-text-secondary-dark"><strong>{{ .Params.company }}</strong></p>
+      <p class="font-light text-lg text-text-secondary dark:text-text-secondary-dark">{{ .Params.year }}</p>
   </div>
-    <div class="prose prose-p:text-text prose-p:text-justify">
+    <div class="prose prose-p:text-text dark:prose-p:text-text-dark prose-p:text-justify">
       {{ .Content }}
     </div>
-    <span class="absolute -left-[11px] top-10 h-5 w-5 rounded-full bg-accent"></span>
+    <span class="absolute -left-[11px] top-10 h-5 w-5 rounded-full bg-accent dark:bg-accent-dark"></span>
 </div>
